@@ -1,0 +1,25 @@
+import {babel} from '@rollup/plugin-babel';
+import {terser} from 'rollup-plugin-terser';
+
+import {main} from './package.json';
+
+let globals = {
+	'xlsx': 'XLSX',
+};
+
+export default {
+	external: Object.keys(globals),
+	input: 'src/index.js',
+	plugins: [
+		babel({
+			babelHelpers: 'bundled',
+			presets: ['@babel/preset-env'],
+		}),
+		terser(),
+	],
+	output: {
+		file: main,
+		format: 'umd',
+		globals,
+	},
+};

@@ -1,0 +1,30 @@
+{
+	"name": "xlsx.utils.cells_to_sheet",
+	"version": "18.10.1",
+	"description": "Converts an array of arrays of cell objects to a worksheet.",
+	"keywords": [
+		"util",
+		"xlsx"
+	],
+	"license": "MIT",
+	"author": "Sergej Sintschilin <seregpie@gmail.com>",
+	"files": [],
+	"main": "index.js",
+	"repository": "github:SeregPie/XLSX.utils.cells_to_sheet",
+	"scripts": {
+		"build": "rollup -c",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.13.10",
+		"@babel/preset-env": "^7.13.10",
+		"@rollup/plugin-babel": "^5.3.0",
+		"eslint": "^7.22.0",
+		"eslint-config-seregpie": "^1.0.2",
+		"rollup": "^2.42.0",
+		"rollup-plugin-terser": "^7.0.2"
+	},
+	"peerDependencies": {
+		"xlsx": ">=0.9"
+	}
+}
